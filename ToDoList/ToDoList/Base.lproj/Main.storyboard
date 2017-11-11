@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--To Do-->
         <scene sceneID="hNz-n2-bh7">
@@ -45,7 +50,39 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvH-QN-3on">
+                                <rect key="frame" x="103" y="56" width="169" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Eg. Get Milk" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-4I-ayV">
+                                <rect key="frame" x="9" y="122" width="357" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="wvv-I5-tyg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDJ-8d-7sN">
+                                <rect key="frame" x="120" y="203" width="135" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FvH-QN-3on" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="36" id="0ki-QA-YA2"/>
+                            <constraint firstItem="FvH-QN-3on" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="VUA-ZA-3d0"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="aUD-4I-ayV" secondAttribute="trailing" constant="9" id="n3e-yj-qA4"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="sDJ-8d-7sN" secondAttribute="trailing" constant="120" id="sTd-nq-lrZ"/>
+                            <constraint firstItem="sDJ-8d-7sN" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="120" id="tRJ-mM-QdD"/>
+                            <constraint firstItem="sDJ-8d-7sN" firstAttribute="top" secondItem="aUD-4I-ayV" secondAttribute="bottom" constant="45" id="vnf-kI-EBQ"/>
+                            <constraint firstItem="aUD-4I-ayV" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="9" id="xev-yM-tpt"/>
+                            <constraint firstItem="aUD-4I-ayV" firstAttribute="top" secondItem="FvH-QN-3on" secondAttribute="bottom" constant="25" id="zoB-nM-UX8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="add" id="cPa-gy-q4n">
@@ -54,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="359.15492957746477"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

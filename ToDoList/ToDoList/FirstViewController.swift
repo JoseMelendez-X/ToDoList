@@ -18,12 +18,13 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     //tableView Reference
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var noTasksView: UIView!
+    
     //MARK: - Life Cycle
     
     //viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         
     }
     
@@ -40,6 +41,14 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidAppear(true)
 
         getUserDefaults()
+        
+        if taskList.count == 0 {
+            
+            tableView.backgroundView = noTasksView
+        } else {
+            
+            tableView.backgroundView = nil
+        }
         
     }
     

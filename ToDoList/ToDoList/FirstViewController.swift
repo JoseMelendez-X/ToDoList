@@ -24,7 +24,14 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        
     }
+    
+    //Make status bar white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     
     //viewDidAppear
     override func viewDidAppear(_ animated: Bool) {

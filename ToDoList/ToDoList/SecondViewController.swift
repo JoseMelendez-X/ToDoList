@@ -10,11 +10,25 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    //MARK: - IB-Outlets
+    
+    //TextField Reference
+    @IBOutlet weak var enterTaskTextfield: UITextField!
+    
+    //MARK: - Life Cycle
+    
+    //viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-
+    
+    //MARK: - IB-Actions
+    
+    //Add Button Tapped
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 }
 
